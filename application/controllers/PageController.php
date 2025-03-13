@@ -1,8 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 
-class PageController extends CI_Controller {
+class PageController extends CI_Controller
+{
 
     public function index()
     {
@@ -20,9 +21,18 @@ class PageController extends CI_Controller {
     }
 
     public function blog($blog_url = '')
-    { 
+    {
         $data['blog_url'] = $blog_url;
-        $this->load->view('blogView', $data); 
+        $this->load->view('blogView', $data);
     }
+
+    public function demo()
+    {
+        $this->load->model('StudentModel');
+        $title = $this->StudentModel->demo();
+        $data['name'] = $title;
+        $this->load->view('demoview',$data);
+    }
+
 }
 ?>
