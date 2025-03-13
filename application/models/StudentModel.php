@@ -37,6 +37,12 @@ class StudentModel extends CI_Model {
         }
     }
 
+    public function demo()
+    {
+        $title = "This is a demo title in model";
+        return $title;
+    }
+
 }
 
 ?>

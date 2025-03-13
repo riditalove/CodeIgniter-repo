@@ -73,4 +73,6 @@ To start the localhost server, use the following command:
 php -S localhost:8000
 ```
 
+# View
 
+View can't be called directly. It needs to be loaded by the controller.
